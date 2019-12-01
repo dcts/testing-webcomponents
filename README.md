@@ -7,3 +7,6 @@ statis webpage is live (hosted via firebase): https://testing-webcomponents.fire
 
 ### Problem
 The webcomponent is working fine on desktop, but on mobile it just wont appear. Im not sure why this is. Any help is appreciated.
+
+### Update
+- problem solved by adding polyfill js file -> https://github.com/webcomponents/polyfills/tree/master/packages/webcomponentsjs
