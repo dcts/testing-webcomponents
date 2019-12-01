@@ -3,7 +3,7 @@ class ProgressBar extends HTMLElement {
   constructor() {
     super();
 
-    this.shadow = this.createShadowRoot();
+    this.shadow = this.attachShadow({mode: 'open'});
 
     this._complete = 0; //this.getAttribute("complete");
     this._color = "gray"; //this.getAttribute("color");
