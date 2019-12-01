@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Components</title>
+
+  <style>
+    body {
+      font-family: 'Helvetica Neue';
+    }
+  </style>
+
+  <script src="progressbar.js"></script>
+</head>
+<body>
+  <h1>Web Components</h1>
+
+  <progress-bar id="my-progress-bar"></progress-bar>
+
+  <script>
+    const pb = document.getElementById("my-progress-bar");
+    pb.complete = 50;
+    pb.color = "red";
+    (function() {
+      var progress = document.querySelector('progress-bar'),
+          complete = 0;
+      var progressInterval = setInterval(() => {
+        complete += 1;
+        if (complete <= 100) {
+          progress.setAttribute('complete', complete);
+        } else {
+          clearInterval(progressInterval);
+        }
+      }, 100);
+    })();
+  </script>
+</body>
+</html>
